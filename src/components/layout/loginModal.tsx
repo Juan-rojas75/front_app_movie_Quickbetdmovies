@@ -5,8 +5,8 @@ import React, { useState, FormEvent, useRef } from "react";
 import { setToken, setUser } from "../../lib/store/store";
 import { useDispatch } from "react-redux";
 
-// const urlApi_ = "https://backend-app-movie-quickbetdmovies.onrender.com"
-const urlApi_ = "http://localhost:4000"
+const urlApi_ = "https://backend-app-movie-quickbetdmovies.onrender.com"
+// const urlApi_ = "http://localhost:4000"
 
 export default function Loginmodal({ isOpen, onClose }) {
   const [selected, setSelected] = useState("login"); 
