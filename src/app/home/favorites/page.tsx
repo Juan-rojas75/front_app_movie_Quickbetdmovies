@@ -6,7 +6,7 @@ import { RootState } from '../../../lib/store/store';
 import Card from "@/components/common/Card";
 
 export default function Home() {
-  const [allMovies, setAllMovies] = useState<[]>(null);
+  const [allMovies, setAllMovies] = useState(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
