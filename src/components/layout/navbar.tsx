@@ -2,12 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../lib/store/store';
+import { logout,RootState  } from '../../lib/store/store';
 import { useState } from "react";
 import Loginmodal from "./loginModal";
 export default function Navbar() {
   const dispatch = useDispatch();
-  const token = useSelector((state) => state.auth.token);
+  const token = useSelector((state:RootState) => state.auth.token);
 
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 

@@ -1,5 +1,6 @@
-// store/store.js
+// store/store.ts
 import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { AuthState } from './types';
 
 const initialToken = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
 
@@ -7,7 +8,7 @@ const authSlice = createSlice({
   name: 'auth',
   initialState: {
     token: initialToken,
-  },
+  } as AuthState,
   reducers: {
     setToken: (state, action) => {
       state.token = action.payload;
@@ -31,5 +32,8 @@ const store = configureStore({
     auth: authSlice.reducer,
   },
 });
+
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
 
 export default store;
