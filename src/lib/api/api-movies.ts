@@ -1,7 +1,5 @@
 'use client';
 import axios from 'axios';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../lib/store/store';
 // const urlApi_ = "https://backend-app-movie-quickbetdmovies.onrender.com"
 const urlApi_ = "http://localhost:4000"
 export async function fetchPopularMovies(page = 1) {
