@@ -4,7 +4,7 @@ import FilterableList from "../common/FilterableList";
 // import ButtonTheme from "./theme";
 
 export default function Sidebar({onsearchData}) {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [ setSelectedItem] = useState(null);
   const Genres = [
     {
       id: 28,
