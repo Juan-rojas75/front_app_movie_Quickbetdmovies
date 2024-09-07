@@ -7,7 +7,7 @@ import { useState } from "react";
 import Loginmodal from "./loginModal";
 export default function Navbar() {
   const dispatch = useDispatch();
-  const token = useSelector((state:any) => state.auth.token);
+  const token = useSelector((state) => state.auth.token);
 
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
