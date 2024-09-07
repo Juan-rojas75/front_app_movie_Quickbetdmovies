@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState, FormEvent, useRef } from "react";
 // import { useRouter } from 'next/router'
-import { setToken } from "../../lib/store/store";
+import { setToken, setUser } from "../../lib/store/store";
 import { useDispatch } from "react-redux";
 
 const urlApi_ = "https://backend-app-movie-quickbetdmovies.onrender.com"
@@ -34,6 +34,7 @@ export default function Loginmodal({ isOpen, onClose }) {
       const data = await response.json();
        // Despachar el token a Redux
       dispatch(setToken(data.access_token)); // Usa el token recibido
+      dispatch(setUser(formData.get("username")));
       // router.push('/home/populares')
       window.location.href = '/home/populares'
     } else {
