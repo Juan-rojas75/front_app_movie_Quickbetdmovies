@@ -2,39 +2,39 @@ import Image from "next/image";
 import Rating from "./rating";
 import Link from "next/link";
 
-export default function Card(cardInfo) {
+export default function Card({cardInfo, fav = true}) {
   return (
-    <Link href={`/home/moviedetails/?id=${encodeURIComponent(cardInfo.cardInfo.id)}`}>
+    <Link href={`/home/moviedetails/?id=${encodeURIComponent(cardInfo.id)}`}>
       <div className="rounded-lg max-w-56">
         <Image
           src={
-            "https://image.tmdb.org/t/p/w500" + cardInfo.cardInfo.poster_path
+            "https://image.tmdb.org/t/p/w500" + cardInfo.poster_path
           }
-          alt={cardInfo.cardInfo.title}
+          alt={cardInfo.title}
           width={200}
           height={50}
           className="w-full rounded-t-lg"
         ></Image>
         <div className="flex flex-col gap-2 bg-[#262626] text-white max-w-56 h-40s pt-1 px-2 pb-2 rounded-b-lg">
           <h1 className="text-sm font-semibold truncate">
-            {cardInfo.cardInfo.title}
+            {cardInfo.title}
           </h1>
           <span className="text-xs w-full max-w-56">
-            {cardInfo.cardInfo.release_date}
+            {cardInfo.release_date}
           </span>
           <div className="flex flex-row justify-between px-4 pt-4">
             <div className="flex flex-col gap-4 justify-center">
               <span>Rating</span>
               <Rating
-                total={cardInfo.cardInfo.vote_average}
+                total={cardInfo.vote_average}
                 thickness={3}
                 size={50}
               />
             </div>
-            <div className="flex flex-col gap-4 justify-center">
+            {fav && (<div className="flex flex-col gap-4 justify-center">
               <span>Favorites</span>
               <button className="flex flex-row justify-center items-center">
-                {cardInfo.cardInfo.id > 0 && (
+                {cardInfo.id > 0 && (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="45"
@@ -48,7 +48,8 @@ export default function Card(cardInfo) {
                   </svg>
                 )}
               </button>
-            </div>
+            </div>)}
+            
           </div>
         </div>
       </div>

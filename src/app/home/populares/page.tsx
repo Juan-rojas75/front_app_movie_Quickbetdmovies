@@ -115,7 +115,7 @@ export default function Popular() {
             {filteredMovies &&
               filteredMovies.results.map((movie) => (
                 <div key={movie.id}>
-                  <Card cardInfo={movie} />
+                  <Card cardInfo={movie} fav={false} />
                 </div>
               ))}
           </div>
