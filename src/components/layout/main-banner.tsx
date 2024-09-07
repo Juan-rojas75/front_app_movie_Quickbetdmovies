@@ -1,6 +1,6 @@
 import Rating from "../common/rating";
 
-export default function Mainbanner(dataMovie: any) {
+export default function Mainbanner(dataMovie) {
   return (
     <div className="w-full">
       <div
