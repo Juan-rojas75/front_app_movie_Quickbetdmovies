@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 
 const ButtonTheme = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  // const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <label className="inline-flex items-center relative">

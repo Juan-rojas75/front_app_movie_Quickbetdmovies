@@ -1,6 +1,5 @@
-import Mainbanner from "@/components/layout/main-banner";
 import Navbar  from "../../components/layout/navbar";
-import { fetchPopularMovies } from "@/lib/api/api-movies";
+
 
 export default function Layout(
   {

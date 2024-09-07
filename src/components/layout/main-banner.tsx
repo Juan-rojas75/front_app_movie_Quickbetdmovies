@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Rating from "../common/rating";
 
 export default function Mainbanner(dataMovie: any) {
