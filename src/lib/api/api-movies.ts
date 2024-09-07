@@ -1,7 +1,7 @@
 import axios from 'axios';
-
+const urlApi_ = "https://backend-app-movie-quickbetdmovies.onrender.com"
 export async function fetchPopularMovies(page = 1) {
-  const response = await axios.get(`http://localhost:3000/api/v1/movies/popular/${page}`);
+  const response = await axios.get(`${urlApi_}/api/v1/movies/popular/${page}`);
   // if (!response.data.ok) {
   //   throw new Error("Failed to fetch popular movies");
   // }
@@ -10,7 +10,7 @@ export async function fetchPopularMovies(page = 1) {
 
 export async function fetchMovieDetails(id) {
   try {
-    const response = await fetch(`http://localhost:3000/api/v1/movies/details/${id}`);
+    const response = await fetch(`${urlApi_}/api/v1/movies/details/${id}`);
     if (!response.ok) {
       throw new Error('Failed to fetch movie details');
     }

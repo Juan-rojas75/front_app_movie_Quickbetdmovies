@@ -5,6 +5,7 @@ import React, { useState, FormEvent, useRef } from "react";
 import { setToken } from "../../lib/store/store";
 import { useDispatch } from "react-redux";
 
+const urlApi_ = "https://backend-app-movie-quickbetdmovies.onrender.com"
 
 export default function Loginmodal({ isOpen, onClose }) {
   const [selected, setSelected] = useState("login"); 
@@ -19,7 +20,7 @@ export default function Loginmodal({ isOpen, onClose }) {
   async function submitLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const response = await fetch("http://localhost:3000/api/v1/auth/login/", {
+    const response = await fetch(`${urlApi_}/api/v1/auth/login/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -46,7 +47,7 @@ export default function Loginmodal({ isOpen, onClose }) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
 
-    const response = await fetch("http://localhost:3000/api/v1/auth/", {
+    const response = await fetch(`${urlApi_}/api/v1/auth/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
