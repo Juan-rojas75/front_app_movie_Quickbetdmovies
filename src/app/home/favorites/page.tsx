@@ -6,6 +6,9 @@ import { RootState  } from '../../../lib/store/store';
 import Card from "@/components/common/Card";
 
 
+
+export default async function Home(){
+  
 const [allMovies, setAllMovies] = useState(null);
 const [isLoading, setIsLoading] = useState(true); // Estado para manejar la carga de datos
 const [error, setError] = useState(null); // Estado para manejar errores
@@ -24,10 +27,6 @@ const loadMovies = async (username) => {
       setIsLoading(false);
     }
   };
-
-
-
-export default async function Home(){
     const user = useSelector((state:RootState) => state.auth.user);
     useEffect(() => {
         loadMovies(user);
