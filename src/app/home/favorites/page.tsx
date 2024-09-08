@@ -65,7 +65,7 @@ export default function Home() {
     <div className="bg-[#454545]">
       <div className="flex flex-row gap-5 flex-wrap p-10">
         {allMovies &&
-          allMovies.map((movie: any) => (
+          allMovies.map((movie) => (
             <div key={movie.id}>
               <Card cardInfo={movie} />
             </div>
