@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Movie App 🎬
 
-## Getting Started
+Una aplicación de películas creada con Next.js que permite a los usuarios explorar películas populares, ver detalles, y marcar sus favoritas.
 
-First, run the development server:
+## 📋 Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🔍 **Exploración de Películas Populares:** Busca y explora películas populares.
+- 📑 **Detalles de Películas:** Consulta información detallada de cada película, como descripción, géneros, fecha de lanzamiento, etc.
+- ⭐ **Favoritos:** Marca películas como favoritas.
+- 📄 **Filtros y Paginación:** Filtra películas por género y navega entre páginas.
+- 🔧 **Integración con API Externa:** Utiliza la API de películas para obtener datos actualizados.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Next.js](https://nextjs.org/) - Framework React para aplicaciones web.
+- [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript tipado.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - Manejo del estado global de la aplicación.
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS para estilos.
+- [Axios](https://axios-http.com/) - Cliente HTTP para llamadas a la API.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Instalación
 
-## Learn More
+Sigue estos pasos para instalar y ejecutar la aplicación en tu máquina local.
 
-To learn more about Next.js, take a look at the following resources:
+### Prerrequisitos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Node.js**: Requiere Node.js versión 14 o superior.
+- **NPM o Yarn**: Gestor de paquetes de Node.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Pasos de Instalación
 
-## Deploy on Vercel
+1. **Clona este repositorio:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone https://github.com/Juan-rojas75/front_app_movie_Quickbetdmovies
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Instala las dependencias:**
+
+    Usando npm:
+
+    ```bash
+    npm install
+    ```
+
+    O usando yarn:
+
+    ```bash
+    yarn install
+    ```
+
+3. **Configura las Variables de Entorno:**
+
+    Crea un archivo `.development.env` en la raíz del proyecto y añade las siguientes variables de entorno:
+
+    ```bash
+    NEXT_PUBLIC_API_KEY=tu_api_key_aqui
+    ```
+
+    Asegúrate de reemplazar `tu_api_key_aqui` con tu clave de API obtenida de [The Movie Database (TMDB)](https://www.themoviedb.org/documentation/api).
+
+4. **Inicia el Servidor de Desarrollo:**
+
+    Usando npm:
+
+    ```bash
+    npm run dev
+    ```
+
+    O usando yarn:
+
+    ```bash
+    yarn dev
+    ```
+
+    Abre tu navegador y ve a `http://localhost:3000` para ver la aplicación en acción.
+
+## 📂 Estructura del Proyecto
+
+Una breve descripción de la estructura del proyecto:
+
+```plaintext
+.
+├── components       # Componentes reutilizables
+├── pages            # Páginas del proyecto
+├── lib              # Lógica de negocio y funciones auxiliares
+├── public           # Archivos públicos estáticos (imágenes, iconos, etc.)
+├── styles           # Archivos CSS
+├── store            # Configuración de Redux
+├── utils            # Utilidades y funciones auxiliares
+└── README.md        # Documentación del proyecto
